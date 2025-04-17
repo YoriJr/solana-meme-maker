@@ -13,10 +13,13 @@
             color: #fff;
             text-align: center;
             padding: 20px;
+            margin: 0;
         }
 
         h1 {
-            color: #000000;
+            color: #000000;  /* Black color */
+            text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 30px #FF00FF, 0 0 40px #FF00FF;
+            font-size: 3em;
         }
 
         p {
@@ -27,14 +30,17 @@
             background-color: #FF6347;
             color: white;
             padding: 10px 20px;
-            border: none;
+            border: 2px solid #FF6347;
             cursor: pointer;
             border-radius: 5px;
             font-size: 16px;
+            transition: all 0.3s ease-in-out;
         }
 
         .cta-button:hover {
             background-color: #FF4500;
+            transform: scale(1.1);
+            box-shadow: 0 0 10px #FF6347, 0 0 20px #FF6347, 0 0 30px #FF6347;
         }
 
         @keyframes gradientShift {
@@ -47,6 +53,10 @@
             100% {
                 background-position: 0% 50%;
             }
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
