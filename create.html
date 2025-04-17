@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Meme Coin - Solana Meme Maker</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #000000, #00FFFF, #000000);
+            background-size: 300% 300%;
+            animation: gradientShift 15s ease infinite;
+            color: #ffffff;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: rgba(0, 0, 0, 0.6);
+            position: sticky;
+            top: 0;
+        }
+
+        header h2 {
+            color: #00FFFF;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #ffffff;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #FF00FF;
+        }
+
+        .form-container {
+            max-width: 500px;
+            margin: 100px auto;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #00FFFF;
+            box-shadow: 0 0 20px #00FFFF;
+        }
+
+        .form-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #FF00FF;
+        }
+
+        .form-container label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .form-container button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            background-color: #FF6347;
+            border: 2px solid #FF6347;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .form-container button:hover {
+            background-color: #FF4500;
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #FF6347;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: #00FFFF;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h2>Solana Meme Maker</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="create.html">Create</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<div class="form-container">
+    <h1>Create Your Meme Coin</h1>
+    <label for="name">Coin Name</label>
+    <input type="text" id="name" placeholder="e.g. DogeLord">
+
+    <label for="symbol">Coin Symbol</label>
+    <input type="text" id="symbol" placeholder="e.g. DGLD">
+
+    <label for="supply">Total Supply</label>
+    <input type="number" id="supply" placeholder="e.g. 1000000">
+
+    <label for="description">Description</label>
+    <input type="text" id="description" placeholder="e.g. The next legendary meme coin!">
+
+    <button onclick="alert('This feature will be available soon!')">Generate Meme Coin</button>
+</div>
+
+<footer>
+    &copy; 2025 Solana Meme Maker | Contact us: solanamememaker@gmail.com
+</footer>
+
+</body>
+</html>
