@@ -3,20 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You!</title>
+    <title>Message Sent - Solana Meme Maker</title>
     <style>
         body {
-            background: linear-gradient(135deg, #00FFFF, #FF69B4, #FFD700);
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #00FFFF, #FF00FF, #00FF00);
             background-size: 300% 300%;
             animation: gradientShift 10s ease infinite;
-            font-family: Arial, sans-serif;
             color: #ffffff;
+        }
+
+        header {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            height: 100vh;
-            margin: 0;
+            padding: 20px 50px;
+            background: rgba(0, 0, 0, 0.6);
+            position: sticky;
+            top: 0;
+        }
+
+        header h2 {
+            color: #00FFFF;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #ffffff;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #FF00FF;
+        }
+
+        .thankyou-message {
             text-align: center;
+            padding: 100px 20px;
+        }
+
+        .thankyou-message h1 {
+            color: #000;
+            text-shadow: 0 0 10px #00FFFF, 0 0 20px #FF00FF, 0 0 30px #00FF00;
+            font-size: 3em;
+        }
+
+        .thankyou-message p {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #fff;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: #00FFFF;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            margin-top: 50px;
         }
 
         @keyframes gradientShift {
@@ -24,14 +70,28 @@
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
-
-        h1 {
-            text-shadow: 0 0 10px #00FFFF, 0 0 20px #FF69B4;
-            color: #000;
-        }
     </style>
 </head>
 <body>
-    <h1>Thank you for contacting us! Your message has been sent.</h1>
+
+<header>
+    <h2>Solana Meme Maker</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="create.html">Create</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="thankyou-message">
+    <h1>Thank you for contacting us!</h1>
+    <p>Your message has been sent successfully. We will get back to you soon!</p>
+</section>
+
+<footer>
+    &copy; 2025 Solana Meme Maker | Email: solanamememaker@gmail.com
+</footer>
+
 </body>
 </html>
