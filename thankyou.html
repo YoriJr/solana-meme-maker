@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You!</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #00FFFF, #FF69B4, #FFD700);
+            background-size: 300% 300%;
+            animation: gradientShift 10s ease infinite;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        h1 {
+            text-shadow: 0 0 10px #00FFFF, 0 0 20px #FF69B4;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Thank you for contacting us! Your message has been sent.</h1>
+</body>
+</html>
