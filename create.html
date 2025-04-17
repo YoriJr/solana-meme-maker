@@ -52,7 +52,8 @@
         .form-container h1 {
             text-align: center;
             margin-bottom: 20px;
-            color: #FF00FF;
+            color: #000; /* Changed title to black */
+            text-shadow: 0 0 10px #00FFFF, 0 0 20px #FF00FF;
         }
 
         .form-container label {
@@ -117,6 +118,7 @@
 
 <div class="form-container">
     <h1>Create Your Meme Coin</h1>
+
     <label for="name">Coin Name</label>
     <input type="text" id="name" placeholder="e.g. DogeLord">
 
@@ -129,7 +131,10 @@
     <label for="description">Description</label>
     <input type="text" id="description" placeholder="e.g. The next legendary meme coin!">
 
-    <button onclick="alert('This feature will be available soon!')">Generate Meme Coin</button>
+    <label for="logo">Upload Logo</label>
+    <input type="file" id="logo" accept="image/*">
+
+    <button onclick="alert('Meme coin creation feature coming soon!')">Generate Meme Coin</button>
 </div>
 
 <footer>
