@@ -6,63 +6,151 @@
     <title>Solana Meme Maker</title>
     <style>
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
             background: linear-gradient(135deg, #00FFFF, #FF00FF, #00FF00);
             background-size: 300% 300%;
             animation: gradientShift 10s ease infinite;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            margin: 0;
+            color: #ffffff;
         }
 
-        h1 {
-            color: #000000;  /* Black color */
-            text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 30px #FF00FF, 0 0 40px #FF00FF;
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: rgba(0, 0, 0, 0.6);
+            position: sticky;
+            top: 0;
+        }
+
+        header h2 {
+            color: #00FFFF;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #ffffff;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #FF00FF;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            color: #000;
+            text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 30px #FF00FF;
             font-size: 3em;
         }
 
-        p {
+        .hero p {
             font-size: 18px;
+            margin-top: 20px;
         }
 
         .cta-button {
+            margin-top: 30px;
+            padding: 12px 25px;
+            font-size: 18px;
             background-color: #FF6347;
-            color: white;
-            padding: 10px 20px;
             border: 2px solid #FF6347;
-            cursor: pointer;
+            color: white;
             border-radius: 5px;
-            font-size: 16px;
+            cursor: pointer;
             transition: all 0.3s ease-in-out;
         }
 
         .cta-button:hover {
             background-color: #FF4500;
             transform: scale(1.1);
-            box-shadow: 0 0 10px #FF6347, 0 0 20px #FF6347, 0 0 30px #FF6347;
+            box-shadow: 0 0 10px #FF6347, 0 0 20px #FF6347;
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 50px 20px;
+            gap: 30px;
+        }
+
+        .feature-box {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            width: 250px;
+            border: 1px solid #00FFFF;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px #00FFFF;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: #00FFFF;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
         }
 
         @keyframes gradientShift {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        html {
-            scroll-behavior: smooth;
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
     </style>
 </head>
 <body>
+
+<header>
+    <h2>Solana Meme Maker</h2>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Create</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
     <h1>Welcome to Solana Meme Maker!</h1>
-    <p>Create your own meme coins on the Solana blockchain!</p>
-    <button class="cta-button" onclick="alert('Connect your wallet soon!')">Connect Wallet</button>
+    <p>Create your own Solana meme coins — no code, just vibes!</p>
+    <button class="cta-button" onclick="alert('Connect your wallet soon!')">Launch Meme Coin</button>
+</section>
+
+<section class="features">
+    <div class="feature-box">
+        <h3>Fast Creation</h3>
+        <p>Deploy your meme coin in minutes!</p>
+    </div>
+    <div class="feature-box">
+        <h3>Solana-Powered</h3>
+        <p>High speed & low gas fees on Solana.</p>
+    </div>
+    <div class="feature-box">
+        <h3>No Coding</h3>
+        <p>Just fill out a form, and your coin is live.</p>
+    </div>
+    <div class="feature-box">
+        <h3>Secure & Verified</h3>
+        <p>Your tokens are safe and blockchain-verified.</p>
+    </div>
+</section>
+
+<footer>
+    &copy; 2025 Solana Meme Maker | Built with love by Rose & Jacob
+</footer>
+
 </body>
 </html>
