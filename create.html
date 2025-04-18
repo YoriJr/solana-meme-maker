@@ -1,158 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Your Meme Coin - Solana Meme Maker</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #00FF7F, #00FFFF, #8A2BE2);
-            background-size: 300% 300%;
-            animation: gradientShift 10s ease infinite;
-            color: #ffffff;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Meme Coin - Solana Meme Maker</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #00FF7F, #00FFFF, #8A2BE2);
+      background-size: 300% 300%;
+      animation: gradientShift 10s ease infinite;
+      color: #ffffff;
+    }
+    @keyframes gradientShift {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 50px;
-            background: rgba(0, 0, 0, 0.6);
-            position: sticky;
-            top: 0;
-        }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background: rgba(0, 0, 0, 0.6);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    header h2 { color: #00FF7F; }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #ffffff;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #FFD700; }
 
-        header h2 {
-            color: #00FF7F;
-        }
+    .creator-section {
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .creator-section h1 {
+      color: #000;
+      text-shadow: 0 0 10px #00FFFF, 0 0 20px #FF69B4, 0 0 30px #FFD700;
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
 
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #ffffff;
-            transition: color 0.3s;
-        }
+    .creator-form {
+      background: rgba(0, 0, 0, 0.4);
+      display: inline-block;
+      padding: 30px;
+      border-radius: 15px;
+      margin-top: 30px;
+      max-width: 400px;
+      width: 100%;
+      text-align: left;
+    }
+    .creator-form label {
+      margin: 10px 0 5px;
+      display: block;
+      font-weight: bold;
+      color: #FFD700;
+    }
+    .creator-form input,
+    .creator-form textarea {
+      width: 100%;
+      margin: 8px 0 20px;
+      padding: 10px;
+      border: 1px solid #00FF7F;
+      border-radius: 5px;
+      background: #000;
+      color: white;
+    }
+    .creator-form textarea {
+      resize: vertical;
+      min-height: 60px;
+    }
 
-        nav a:hover {
-            color: #FFD700;
-        }
+    /* Styled file-upload box */
+    .logo-upload-label {
+      display: block;
+      text-align: center;
+      margin: 15px 0;
+      color: #FFD700;
+      cursor: pointer;
+    }
+    .upload-box {
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px dashed #00FF7F;
+      border-radius: 10px;
+      padding: 30px 20px;
+      color: #00FF7F;
+      transition: all 0.3s ease-in-out;
+    }
+    .upload-box:hover {
+      background: rgba(0, 255, 255, 0.1);
+      transform: scale(1.03);
+      border-color: #FFD700;
+    }
+    .creator-form button {
+      background-color: #FF6347;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      border-radius: 5px;
+      color: white;
+      font-size: 16px;
+      width: 100%;
+    }
+    .creator-form button:hover {
+      background-color: #FF4500;
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #FF6347, 0 0 20px #FF6347;
+    }
 
-        .creator-section {
-            text-align: center;
-            padding: 80px 20px;
-        }
-
-        .creator-section h1 {
-            color: #000;
-            text-shadow: 0 0 10px #00FFFF, 0 0 20px #FF69B4, 0 0 30px #FFD700;
-            font-size: 3em;
-        }
-
-        .creator-form {
-            background: rgba(0, 0, 0, 0.4);
-            display: inline-block;
-            padding: 30px;
-            border-radius: 15px;
-            margin-top: 30px;
-            max-width: 400px;
-            width: 100%;
-            text-align: left;
-        }
-
-        .creator-form label {
-            margin: 10px 0 5px;
-            display: block;
-            font-weight: bold;
-            color: #FFD700;
-        }
-
-        .creator-form input,
-        .creator-form textarea {
-            width: 100%;
-            margin: 8px 0 20px;
-            padding: 10px;
-            border: 1px solid #00FFFF;
-            border-radius: 5px;
-            background: #000;
-            color: white;
-        }
-
-        .creator-form button {
-            background-color: #FF6347;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
-            border-radius: 5px;
-            color: white;
-            font-size: 16px;
-        }
-
-        .creator-form button:hover {
-            background-color: #FF4500;
-            transform: scale(1.05);
-            box-shadow: 0 0 10px #FF6347, 0 0 20px #FF6347;
-        }
-
-        footer {
-            background: rgba(0, 0, 0, 0.8);
-            color: #00FF7F;
-            text-align: center;
-            padding: 15px;
-            font-size: 14px;
-            margin-top: 50px;
-        }
-
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-    </style>
+    footer {
+      background: rgba(0, 0, 0, 0.8);
+      color: #00FF7F;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      margin-top: 50px;
+    }
+  </style>
 </head>
 <body>
 
-<header>
+  <header>
     <h2>Solana Meme Maker</h2>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="create.html">Create</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="create.html">Create</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </nav>
-</header>
+  </header>
 
-<section class="creator-section">
+  <section class="creator-section">
     <h1>Create Your Meme Coin</h1>
     <div class="creator-form">
-        <label for="name">Token Name</label>
-        <input type="text" id="name" placeholder="e.g. DogeMaster" required>
+      <label for="name">Token Name</label>
+      <input type="text" id="name" placeholder="e.g. DogeMaster" required>
 
-        <label for="symbol">Token Symbol</label>
-        <input type="text" id="symbol" placeholder="e.g. DOGE" required>
+      <label for="symbol">Token Symbol</label>
+      <input type="text" id="symbol" placeholder="e.g. DOGE" required>
 
-        <label for="supply">Total Supply</label>
-        <input type="number" id="supply" placeholder="e.g. 1000000" required>
+      <label for="supply">Total Supply</label>
+      <input type="number" id="supply" placeholder="e.g. 1,000,000" required>
 
-        <label for="decimals">Decimals</label>
-        <input type="number" id="decimals" value="6" placeholder="Usually 6" required>
+      <label for="decimals">Decimals</label>
+      <input type="number" id="decimals" value="6" placeholder="Usually 6" required>
 
-        <label for="logo">Upload Logo</label>
-        <input type="file" id="logo" accept="image/*">
+      <label for="logo-upload" class="logo-upload-label">
+        Upload Logo
+        <div class="upload-box">Click to Upload Image</div>
+      </label>
+      <input type="file" id="logo-upload" accept="image/*" style="display:none;">
 
-        <label for="description">Token Description</label>
-        <textarea id="description" placeholder="e.g. The most hyped meme coin on Solana!"></textarea>
+      <label for="description">Token Description</label>
+      <textarea id="description" placeholder="e.g. The most hyped meme coin on Solana!" rows="3"></textarea>
 
-        <button onclick="alert('Blockchain connection coming soon!')">Create Token</button>
+      <button onclick="alert('Blockchain connection coming soon!')">Create Token</button>
     </div>
-</section>
+  </section>
 
-<footer>
+  <footer>
     &copy; 2025 Solana Meme Maker | Email: solanamememaker@gmail.com
-</footer>
+  </footer>
 
 </body>
-</html>
 </html>
