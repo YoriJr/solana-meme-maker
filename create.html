@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Meme Coin - Solana Meme Maker</title>
+    <title>Create Your Meme Coin - Solana Meme Maker</title>
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #00FFB9, #8A2BE2, #FF69B4);
+            background: linear-gradient(135deg, #00FF7F, #00FFFF, #8A2BE2);
             background-size: 300% 300%;
             animation: gradientShift 10s ease infinite;
             color: #ffffff;
@@ -25,7 +25,7 @@
         }
 
         header h2 {
-            color: #00FFB9;
+            color: #00FF7F;
         }
 
         nav a {
@@ -39,57 +39,58 @@
             color: #FFD700;
         }
 
-        .create-section {
+        .creator-section {
             text-align: center;
-            padding: 100px 20px;
+            padding: 80px 20px;
         }
 
-        .create-section h1 {
+        .creator-section h1 {
             color: #000;
-            text-shadow: 0 0 10px #00FFB9, 0 0 20px #FF69B4, 0 0 30px #FFD700;
+            text-shadow: 0 0 10px #00FFFF, 0 0 20px #FF69B4, 0 0 30px #FFD700;
             font-size: 3em;
         }
 
-        .create-form {
+        .creator-form {
             background: rgba(0, 0, 0, 0.4);
             display: inline-block;
             padding: 30px;
             border-radius: 15px;
             margin-top: 30px;
+            max-width: 400px;
+            width: 100%;
         }
 
-        .create-form input,
-        .create-form textarea {
-            display: block;
+        .creator-form input,
+        .creator-form textarea {
             width: 100%;
             margin: 15px 0;
             padding: 10px;
-            border: 1px solid #00FFB9;
+            border: 1px solid #00FFFF;
             border-radius: 5px;
             background: #000;
             color: white;
         }
 
-        .create-form input[type="submit"],
-        .create-form button {
+        .creator-form button {
             background-color: #FF6347;
             border: none;
+            padding: 10px 20px;
             cursor: pointer;
             transition: all 0.3s ease-in-out;
-            padding: 12px 25px;
+            border-radius: 5px;
+            color: white;
             font-size: 16px;
         }
 
-        .create-form input[type="submit"]:hover,
-        .create-form button:hover {
+        .creator-form button:hover {
             background-color: #FF4500;
-            transform: scale(1.1);
+            transform: scale(1.05);
             box-shadow: 0 0 10px #FF6347, 0 0 20px #FF6347;
         }
 
         footer {
             background: rgba(0, 0, 0, 0.8);
-            color: #00FFB9;
+            color: #00FF7F;
             text-align: center;
             padding: 15px;
             font-size: 14px;
@@ -115,21 +116,16 @@
     </nav>
 </header>
 
-<section class="create-section">
+<section class="creator-section">
     <h1>Create Your Meme Coin</h1>
-    <p>Fill out the details below to create your custom Solana Meme Coin!</p>
-
-    <div class="create-form">
-        <form action="https://formsubmit.co/solanamememaker@gmail.com" method="POST" enctype="multipart/form-data">
-            <input type="text" name="token_name" placeholder="Token Name" required>
-            <input type="text" name="token_symbol" placeholder="Token Symbol" required>
-            <input type="number" name="total_supply" placeholder="Total Supply" required>
-            <input type="number" name="decimals" placeholder="Decimals (Usually 6)" value="6" required>
-            <textarea name="token_description" placeholder="Description" rows="3" required></textarea>
-            <input type="file" name="logo" accept="image/*" required>
-            <button type="submit">Create Meme Coin</button>
-            <input type="hidden" name="_next" value="https://yorijr.github.io/solana-meme-maker/thankyou.html">
-        </form>
+    <div class="creator-form">
+        <input type="text" placeholder="Token Name" required>
+        <input type="text" placeholder="Token Symbol" required>
+        <input type="number" placeholder="Total Supply" required>
+        <input type="number" value="6" placeholder="Decimals (default 6)" required>
+        <input type="file" accept="image/*" placeholder="Upload Logo">
+        <textarea placeholder="Enter Token Description"></textarea>
+        <button onclick="alert('Blockchain connection coming soon!')">Create Token</button>
     </div>
 </section>
 
