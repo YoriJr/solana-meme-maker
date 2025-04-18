@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Your Solana Meme Coin</title>
+    <title>Create Your Meme Coin - Solana Meme Maker</title>
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #00FFFF, #8A2BE2, #FF69B4);
+            background: linear-gradient(135deg, #00FFFF, #FF00FF, #00FF00);
             background-size: 300% 300%;
             animation: gradientShift 10s ease infinite;
             color: #ffffff;
@@ -25,7 +25,7 @@
         }
 
         header h2 {
-            color: #FF69B4;
+            color: #00FFFF;
         }
 
         nav a {
@@ -36,53 +36,67 @@
         }
 
         nav a:hover {
-            color: #FFD700;
+            color: #FF00FF;
         }
 
-        .form-section {
-            max-width: 500px;
-            background: rgba(0, 0, 0, 0.5);
-            margin: 100px auto;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 0 20px #00FFFF;
-        }
-
-        .form-section h1 {
-            color: #000;
-            text-shadow: 0 0 10px #00FFFF, 0 0 20px #FF69B4;
+        .create-section {
             text-align: center;
+            padding: 100px 20px;
+        }
+
+        .create-section h1 {
+            color: #000;
+            text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 30px #FF00FF;
+            font-size: 3em;
             margin-bottom: 20px;
         }
 
-        .form-section label {
-            display: block;
-            margin: 10px 0 5px;
-            color: #FFD700;
+        .create-section p {
+            color: #ffffff;
+            font-size: 1.2em;
+            margin-bottom: 30px;
         }
 
-        .form-section input,
-        .form-section textarea {
+        .create-form {
+            background: rgba(0, 0, 0, 0.4);
+            display: inline-block;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+
+        .create-form input,
+        .create-form textarea {
+            display: block;
             width: 100%;
+            margin: 15px 0;
             padding: 10px;
             border: 1px solid #00FFFF;
             border-radius: 5px;
             background: #000;
             color: white;
-            margin-bottom: 15px;
         }
 
-        .form-section input[type="submit"] {
+        .create-form input[type="submit"] {
             background-color: #FF6347;
             border: none;
             cursor: pointer;
             transition: all 0.3s ease-in-out;
         }
 
-        .form-section input[type="submit"]:hover {
+        .create-form input[type="submit"]:hover {
             background-color: #FF4500;
             transform: scale(1.1);
             box-shadow: 0 0 10px #FF6347, 0 0 20px #FF6347;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: #00FFFF;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            margin-top: 50px;
         }
 
         @keyframes gradientShift {
@@ -90,7 +104,6 @@
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
-
     </style>
 </head>
 <body>
@@ -105,34 +118,23 @@
     </nav>
 </header>
 
-<section class="form-section">
+<section class="create-section">
     <h1>Create Your Meme Coin</h1>
-    <form>
-        <label for="tokenName">Token Name</label>
-        <input type="text" id="tokenName" name="tokenName" placeholder="Example: Doge King" required>
+    <p>Easily create your own Solana-based meme coin with just a few clicks. No coding skills needed!</p>
 
-        <label for="tokenSymbol">Token Symbol</label>
-        <input type="text" id="tokenSymbol" name="tokenSymbol" placeholder="Example: DGK" required>
-
-        <label for="tokenSupply">Total Supply</label>
-        <input type="number" id="tokenSupply" name="tokenSupply" placeholder="Example: 1000000000" required>
-
-     <p style="font-size:18px; margin-bottom:20px;">
-   Easily create your own Solana Meme Coin in seconds! Fill out the details below and launch your token — no coding, no hassle.
-</p>
-        
-        
-        <label for="tokenDecimals">Decimals</label>
-        <input type="number" id="tokenDecimals" name="tokenDecimals" placeholder="Usually: 6" required>
-
-        <label for="tokenLogo">Upload Logo</label>
-        <input type="file" id="tokenLogo" name="tokenLogo" accept="image/*" required>
-
-        <input type="submit" value="Deploy Token (Coming Soon)">
-    </form>
+    <div class="create-form">
+        <form action="https://formsubmit.co/solanamememaker@gmail.com" method="POST">
+            <input type="text" name="token_name" placeholder="Token Name" required>
+            <input type="text" name="token_symbol" placeholder="Token Symbol" required>
+            <input type="number" name="total_supply" placeholder="Total Supply" required>
+            <input type="number" name="decimals" placeholder="Decimals (Usually 6)" required>
+            <input type="file" name="logo" accept="image/*" required>
+            <button type="submit">Create Meme Coin</button>
+        </form>
+    </div>
 </section>
 
-<footer style="text-align:center; background: rgba(0, 0, 0, 0.8); color:#FF69B4; padding: 15px; font-size: 14px;">
+<footer>
     &copy; 2025 Solana Meme Maker | Email: solanamememaker@gmail.com
 </footer>
 
