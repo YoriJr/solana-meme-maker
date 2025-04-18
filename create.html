@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Meme Coin - Solana Meme Maker</title>
+    <title>Create Your Solana Meme Coin</title>
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #000000, #00FFFF, #000000);
+            background: linear-gradient(135deg, #00FFFF, #8A2BE2, #FF69B4);
             background-size: 300% 300%;
-            animation: gradientShift 15s ease infinite;
+            animation: gradientShift 10s ease infinite;
             color: #ffffff;
         }
 
@@ -25,7 +25,7 @@
         }
 
         header h2 {
-            color: #00FFFF;
+            color: #FF69B4;
         }
 
         nav a {
@@ -36,65 +36,53 @@
         }
 
         nav a:hover {
-            color: #FF00FF;
+            color: #FFD700;
         }
 
-        .form-container {
+        .form-section {
             max-width: 500px;
+            background: rgba(0, 0, 0, 0.5);
             margin: 100px auto;
-            background: rgba(0, 0, 0, 0.6);
             padding: 30px;
-            border-radius: 10px;
-            border: 1px solid #00FFFF;
+            border-radius: 15px;
             box-shadow: 0 0 20px #00FFFF;
         }
 
-        .form-container h1 {
+        .form-section h1 {
+            color: #000;
+            text-shadow: 0 0 10px #00FFFF, 0 0 20px #FF69B4;
             text-align: center;
             margin-bottom: 20px;
-            color: #000; /* Changed title to black */
-            text-shadow: 0 0 10px #00FFFF, 0 0 20px #FF00FF;
         }
 
-        .form-container label {
+        .form-section label {
             display: block;
-            margin-top: 15px;
-            margin-bottom: 5px;
+            margin: 10px 0 5px;
+            color: #FFD700;
         }
 
-        .form-container input {
+        .form-section input,
+        .form-section textarea {
             width: 100%;
             padding: 10px;
-            border: none;
+            border: 1px solid #00FFFF;
             border-radius: 5px;
-            outline: none;
+            background: #000;
+            color: white;
+            margin-bottom: 15px;
         }
 
-        .form-container button {
-            margin-top: 20px;
-            width: 100%;
-            padding: 12px;
-            font-size: 16px;
+        .form-section input[type="submit"] {
             background-color: #FF6347;
-            border: 2px solid #FF6347;
-            color: white;
-            border-radius: 5px;
+            border: none;
             cursor: pointer;
             transition: all 0.3s ease-in-out;
         }
 
-        .form-container button:hover {
+        .form-section input[type="submit"]:hover {
             background-color: #FF4500;
-            transform: scale(1.05);
-            box-shadow: 0 0 15px #FF6347;
-        }
-
-        footer {
-            background: rgba(0, 0, 0, 0.8);
-            color: #00FFFF;
-            text-align: center;
-            padding: 15px;
-            font-size: 14px;
+            transform: scale(1.1);
+            box-shadow: 0 0 10px #FF6347, 0 0 20px #FF6347;
         }
 
         @keyframes gradientShift {
@@ -102,6 +90,7 @@
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
+
     </style>
 </head>
 <body>
@@ -116,29 +105,30 @@
     </nav>
 </header>
 
-<div class="form-container">
+<section class="form-section">
     <h1>Create Your Meme Coin</h1>
+    <form>
+        <label for="tokenName">Token Name</label>
+        <input type="text" id="tokenName" name="tokenName" placeholder="Example: Doge King" required>
 
-    <label for="name">Coin Name</label>
-    <input type="text" id="name" placeholder="e.g. DogeLord">
+        <label for="tokenSymbol">Token Symbol</label>
+        <input type="text" id="tokenSymbol" name="tokenSymbol" placeholder="Example: DGK" required>
 
-    <label for="symbol">Coin Symbol</label>
-    <input type="text" id="symbol" placeholder="e.g. DGLD">
+        <label for="tokenSupply">Total Supply</label>
+        <input type="number" id="tokenSupply" name="tokenSupply" placeholder="Example: 1000000000" required>
 
-    <label for="supply">Total Supply</label>
-    <input type="number" id="supply" placeholder="e.g. 1000000">
+        <label for="tokenDecimals">Decimals</label>
+        <input type="number" id="tokenDecimals" name="tokenDecimals" placeholder="Usually: 9" required>
 
-    <label for="description">Description</label>
-    <input type="text" id="description" placeholder="e.g. The next legendary meme coin!">
+        <label for="tokenLogo">Upload Logo</label>
+        <input type="file" id="tokenLogo" name="tokenLogo" accept="image/*" required>
 
-    <label for="logo">Upload Logo</label>
-    <input type="file" id="logo" accept="image/*">
+        <input type="submit" value="Deploy Token (Coming Soon)">
+    </form>
+</section>
 
-    <button onclick="alert('Meme coin creation feature coming soon!')">Generate Meme Coin</button>
-</div>
-
-<footer>
-    &copy; 2025 Solana Meme Maker | Contact us: solanamememaker@gmail.com
+<footer style="text-align:center; background: rgba(0, 0, 0, 0.8); color:#FF69B4; padding: 15px; font-size: 14px;">
+    &copy; 2025 Solana Meme Maker | Email: solanamememaker@gmail.com
 </footer>
 
 </body>
